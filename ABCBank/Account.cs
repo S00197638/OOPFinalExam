@@ -2,7 +2,7 @@
 
 namespace ABCBank
 {
-    public abstract class Account
+    public abstract class Account : IComparable
     {
         #region Properties
 
@@ -42,16 +42,16 @@ namespace ABCBank
         
         public abstract decimal CalculateInterest();//Abstract method, that child classes can override
 
-        //public int CompareTo(object otherObject)//To list the employees alphabetically
-        //{
-        //    Employee temp = (Employee)otherObject;
-        //    int returnValue = this.LastName.CompareTo(temp.LastName);//Sort by LastName
+        public int CompareTo(object otherObject)//To list the employees alphabetically
+        {
+            Account temp = (Account)otherObject;
+            int returnValue = this.LastName.CompareTo(temp.LastName);//Sort by LastName
 
-        //    if (returnValue == 0)
-        //        returnValue = this.FirstName.CompareTo(temp.FirstName);//If LastName is the same, Sort by FirstName
+            if (returnValue == 0)
+                returnValue = this.FirstName.CompareTo(temp.FirstName);//If LastName is the same, Sort by FirstName
 
-        //    return returnValue;
-        //}
+            return returnValue;
+        }
 
         #endregion
     }

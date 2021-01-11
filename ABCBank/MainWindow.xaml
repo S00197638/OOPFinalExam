@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ABCBank"
         mc:Ignorable="d"
-        Title="ABC Bank" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="ABC Bank" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <CheckBox x:Name="ckbxCurrentAcc" Content="Current Account" HorizontalAlignment="Left" Margin="48,39,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="ckbxSavingsAcc" Content="Savings Account" HorizontalAlignment="Left" Margin="177,39,0,0" VerticalAlignment="Top"/>
