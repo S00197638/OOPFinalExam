@@ -16,14 +16,12 @@
         <TextBlock x:Name="tblkFirstName" HorizontalAlignment="Left" Margin="463,110,0,0" TextWrapping="Wrap" Text="First Name..." VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkLastNameText" HorizontalAlignment="Left" Margin="358,150,0,0" TextWrapping="Wrap" Text="Last Name" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkLastName" HorizontalAlignment="Left" Margin="463,150,0,0" TextWrapping="Wrap" Text="Last Name..." VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkBalanceText" HorizontalAlignment="Left" Margin="358,188,0,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkBalance" HorizontalAlignment="Left" Margin="463,188,0,0" TextWrapping="Wrap" Text="Balance..." VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkAccountTypeText" HorizontalAlignment="Left" Margin="358,232,0,0" TextWrapping="Wrap" Text="Account Type" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkAccountType" HorizontalAlignment="Left" Margin="463,232,0,0" TextWrapping="Wrap" Text="Account Type..." VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkBalance2Text" HorizontalAlignment="Left" Margin="358,277,0,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkBalance2" HorizontalAlignment="Left" Margin="463,277,0,0" TextWrapping="Wrap" Text="Balance..." VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkInterestDateText" HorizontalAlignment="Left" Margin="358,321,0,0" TextWrapping="Wrap" Text="Interest Date" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tblkInterestDate" HorizontalAlignment="Left" Margin="463,321,0,0" TextWrapping="Wrap" Text="Interest Date..." VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkAccountTypeText" HorizontalAlignment="Left" Margin="358,197,0,0" TextWrapping="Wrap" Text="Account Type" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkAccountType" HorizontalAlignment="Left" Margin="463,197,0,0" TextWrapping="Wrap" Text="Account Type..." VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkBalanceText" HorizontalAlignment="Left" Margin="358,250,0,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkBalance" HorizontalAlignment="Left" Margin="463,250,0,0" TextWrapping="Wrap" Text="Balance..." VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkInterestDateText" HorizontalAlignment="Left" Margin="358,292,0,0" TextWrapping="Wrap" Text="Interest Date" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tblkInterestDate" HorizontalAlignment="Left" Margin="463,292,0,0" TextWrapping="Wrap" Text="Interest Date..." VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkTransactionAmountText" HorizontalAlignment="Left" Margin="358,365,0,0" TextWrapping="Wrap" Text="Transaction Amount" VerticalAlignment="Top"/>
         <TextBox x:Name="tbxTransactionAmount" HorizontalAlignment="Left" Height="23" Margin="488,364,0,0" TextWrapping="Wrap" Text="Transaction Amount..." VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
         <Button x:Name="btnDeposit" Content="Deposit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="681,106,0,0"/>
