@@ -30,14 +30,14 @@ namespace ABCBank
 
         #region Methods
 
-        public void Deposit()
+        public decimal Deposit(double amount)
         {
-
+            return Balance += (decimal)amount;
         }
 
-        public void Withdraw()
+        public decimal Withdraw(double amount)
         {
-
+            return Balance -= (decimal)amount;
         }
         
         public abstract decimal CalculateInterest();//Abstract method, that child classes can override

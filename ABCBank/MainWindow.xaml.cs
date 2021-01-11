@@ -152,15 +152,41 @@ namespace ABCBank
                     CurrentAccount temp = (CurrentAccount)selectedAccount;
                     tblkBalance.Text = temp.Balance.ToString();
                     tblkAccountType.Text = "Current Account";
-                    tblkInterestDate.Text = temp.InterestDate.ToString();
+                    tblkInterestDate.Text = "";
                 }
                 else
                 {
                     SavingsAccount temp = (SavingsAccount)selectedAccount;
                     tblkBalance.Text = temp.Balance.ToString();
                     tblkAccountType.Text = "Savings Account";
-                    tblkInterestDate.Text = temp.InterestDate.ToString();
+                    tblkInterestDate.Text = "";
                 }
+            }
+        }
+
+        #endregion
+
+        #region Deposit Button
+
+        private void btnDeposit_Click(object sender, RoutedEventArgs e)//When Deposit Button is clicked
+        {
+            //Checking if there is valid data inputted
+            if (lbxAccountsList.SelectedItem != null && tbxTransactionAmount.Text != "Transaction Amount..." 
+                && tbxTransactionAmount.Text != "")
+            {
+                Account selectedAccount = lbxAccountsList.SelectedItem as Account;//Saving the Data of selected Account in another account object
+                if (selectedAccount != null)//Making sure an account is selected
+                {
+                    decimal depositAmount = Convert.ToDecimal(tbxTransactionAmount.Text);
+                    selectedAccount.Deposit((double)depositAmount);
+                }
+                lbxAccountsList.ItemsSource = null;//Refreshing the display in the listbox
+                CkBxIsChecked();//Check Filtering
+                lbxAccountsList.SelectedItem = selectedAccount;//Selecting the account
+            }
+            else//Show Error Message
+            {
+                MessageBox.Show("To Deposit to an Account, You Must: \nSelect an Account \n& \nEnter Transcation Amount!");
             }
         }
 
