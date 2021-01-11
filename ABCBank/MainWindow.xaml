@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="ABC Bank" Height="450" Width="800" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
-        <CheckBox x:Name="ckbxCurrentAcc" Content="Current Account" HorizontalAlignment="Left" Margin="48,39,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="ckbxSavingsAcc" Content="Savings Account" HorizontalAlignment="Left" Margin="177,39,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="lbxAccountsList" HorizontalAlignment="Left" Height="299" Margin="48,93,0,0" VerticalAlignment="Top" Width="256"/>
+        <CheckBox x:Name="ckbxCurrentAcc" Content="Current Account" HorizontalAlignment="Left" Margin="48,39,0,0" VerticalAlignment="Top" Checked="ckbxCurrentAcc_Checked" Unchecked="ckbxCurrentAcc_Unchecked"/>
+        <CheckBox x:Name="ckbxSavingsAcc" Content="Savings Account" HorizontalAlignment="Left" Margin="177,39,0,0" VerticalAlignment="Top" Checked="ckbxSavingsAcc_Checked" Unchecked="ckbxSavingsAcc_Unchecked"/>
+        <ListBox x:Name="lbxAccountsList" HorizontalAlignment="Left" Height="299" Margin="48,93,0,0" VerticalAlignment="Top" Width="256" SelectionChanged="lbxAccountsList_SelectionChanged"/>
         <TextBlock x:Name="tblkAccounts" HorizontalAlignment="Left" Margin="55,72,0,0" TextWrapping="Wrap" Text="ACCOUNTS LIST" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkAccountDetails" HorizontalAlignment="Left" Margin="358,72,0,0" TextWrapping="Wrap" Text="Account Details" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkFirstNameText" HorizontalAlignment="Left" Margin="358,110,0,0" TextWrapping="Wrap" Text="First Name" VerticalAlignment="Top"/>

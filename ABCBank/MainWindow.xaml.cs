@@ -111,6 +111,59 @@ namespace ABCBank
             }
         }
 
+        private void ckbxCurrentAcc_Checked(object sender, RoutedEventArgs e)//Checking for change in state of the checkbox
+        {
+            CkBxIsChecked();
+        }
+
+        private void ckbxCurrentAcc_Unchecked(object sender, RoutedEventArgs e)//Checking for change in state of the checkbox
+        {
+            CkBxIsChecked();
+        }
+
+        private void ckbxSavingsAcc_Checked(object sender, RoutedEventArgs e)//Checking for change in state of the checkbox
+        {
+            CkBxIsChecked();
+        }
+
+        private void ckbxSavingsAcc_Unchecked(object sender, RoutedEventArgs e)//Checking for change in state of the checkbox
+        {
+            CkBxIsChecked();
+        }
+
+        #endregion
+
+        #region Selection Display
+
+        private void lbxAccountsList_SelectionChanged(object sender, SelectionChangedEventArgs e)//Change of selection in listbox
+        {
+            Account selectedAccount = lbxAccountsList.SelectedItem as Account;//Saving the Data of selected Account in another account object
+
+            if (selectedAccount != null)//Making sure an account is selected
+            {
+                //Setting the fields on the right of the display to the selected account's data
+                tblkFirstName.Text = selectedAccount.FirstName;
+                tblkLastName.Text = selectedAccount.LastName;
+                //Reseting Backgrounds to White, in case they are not
+                tblkFirstName.Background = Brushes.White;
+                tblkLastName.Background = Brushes.White;
+                if (selectedAccount is CurrentAccount)
+                {
+                    CurrentAccount temp = (CurrentAccount)selectedAccount;
+                    tblkBalance.Text = temp.Balance.ToString();
+                    tblkAccountType.Text = "Current Account";
+                    tblkInterestDate.Text = temp.InterestDate.ToString();
+                }
+                else
+                {
+                    SavingsAccount temp = (SavingsAccount)selectedAccount;
+                    tblkBalance.Text = temp.Balance.ToString();
+                    tblkAccountType.Text = "Savings Account";
+                    tblkInterestDate.Text = temp.InterestDate.ToString();
+                }
+            }
+        }
+
         #endregion
 
     }
