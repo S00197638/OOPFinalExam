@@ -166,5 +166,34 @@ namespace ABCBank
 
         #endregion
 
+        #region Interactions
+
+        private void tbxTransactionAmount_GotFocus(object sender, RoutedEventArgs e)//Clearing Field
+        {
+            tbxTransactionAmount.Clear();
+            tbxTransactionAmount.Background = Brushes.White;
+        }
+
+        #endregion
+
+        #region Reset Menu
+
+        private void ResetMenuToDefault()//Reset Menu Display back to Default Text
+        {
+            tblkFirstName.Text = "First Name...";
+            tblkLastName.Text = "Last Name...";
+            tblkBalance.Text = "Balance...";
+            tblkAccountType.Text = "Account Type...";
+            tblkInterestDate.Text = "Interest Date...";
+            tbxTransactionAmount.Text = "Transaction Amount...";
+            //Reseting Backgrounds to White, in case they are not
+            tblkFirstName.Background = Brushes.White;
+            tblkLastName.Background = Brushes.White;
+            //Deselecting
+            lbxAccountsList.SelectedItem = null;
+        }
+
+        #endregion
+
     }
 }
